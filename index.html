@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Auditory context illusion</title>
+<!-- Feuille de style RESET CSS (réinitialise la feuille de style par défaut)-->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- Feuille de style CSS personnalisée -->
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<!-- Chargement de jQuery (simplification du langage JavaScript) -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Chargement des utilitaires-->
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/jquery.func_toggle.js"></script>
+<!-- Chargement du plugin waveSurfer (affichage du signal d'amplitude du son) -->
+<script type="text/javascript" src="js/wavesurfer.min.js"></script>
+<!-- Scripts personnalisés -->
+<script type="text/javascript" src="js/scripts.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Entête -->
+<header>
+  <h1>Auditory context illusion</h1>
+</header>
+<div class="mask"> </div>
+<div class="main-container"> 
+  <!-- Zone Ecoute -->
+  <div id="listening">
+    <h2>Listening</h2>
+    <p>For each sequence, please try and decide:<br />
+      Do you hear the pitch go up or down between the two final tones?</p>
+    <div id="waveform-container-A" class="waveform-container">
+      <div class="header">
+        <h3>Waveform A</h3>
+        <div class="pretty-button" id="butplayA">Play</div>
+      </div>
+      <div class="graphics" id="waveformA"></div>
+    </div>
+    <div id="waveform-container-B" class="waveform-container">
+      <div class="header">
+        <h3>Waveform B</h3>
+        <div class="pretty-button" id="butplayB">Play</div>
+      </div>
+      <div class="graphics" id="waveformB"></div>
+    </div>
+  </div>
+  
+  <!-- Zone Questions-->
+  <div id="questions">
+    <h2>Questions</h2>
+    <div class="questions-played">
+      <div id="question1" class="question">
+        <h3>What did you hear?</h3>
+        <div class="answer">
+          <p>Most people report an upward shift at the end of Sequence A, and a downward shift at the end of Sequence B.
+            Do you agree?</p>
+        </div>
+      </div>
+      <div id="question2" class="question">
+        <h3>What was played?</h3>
+        <div class="answer">
+          <p>In fact, the two final tones of Sequence A are physically identical to the two final tones of Sequence B. Only the preceding melodies are different.</p>
+          <p>Do not take our word for it: use the sliders above to listen only to the two final tones of Sequence A and Sequence B (without any note from the preceding melody). You will hear that they really are the same in both cases.</p>
+        </div>
+      </div>
+    </div>
+    <div id="question3" class="question">
+      <h3 id="want-more-title">Want to know more?</h3>
+      <div id="want-more" class="answer">
+        <p>We believe that the illusion reveals potent and ubiquitous contextual processing in audition, perhaps explaining why people are so good at dealing with complex natural auditory scenes.</p>
+        <p>In a few words, everytime you hear two successive sounds (two phonemes, two musical notes), you need somehow to bind them over time to realise that e.g. pitch went up. In our examples, the final two tones presented a carefully-balanced situation: there were as many "up" transitions between successive frequencies than "down" transitions. What the context did was to bias you towards one possible binding between tones, the binding that minimizes the overall distance between tones (after all, real sounds do tend to evolve smoothly over time).</p>
+        <p>This is only part of the story! For a lot of behavioral data, some brain imaging, and a computational model explaining why this is important for everyday sounds, see: 'Prior context in audition informs binding and shapes simple features', Nature Communications, by Claire Chambers, Sahar Akram, Vincent Adam, Claire Pelofi, Maneesh Sahani, Shihab Shamma, and Daniel Pressnitzer.</p>
+        <p>This work was done in the LSP lab (CNRS &amp; Ecole normale supérieure), in collaboration with U. Maryland (USA) and the Gatsby Institute in London.</p>
+      </div>
+    </div>
+    <div id="question4" class="question">
+      <h3>Wait, it did not really work for me...</h3>
+      <div class="answer">
+        <p> The illusion was found to be highly robust, in a series of psychophysical and online experiments involving 150+ participants. But, interestingly, sometimes there were also strong biases towards one direction, peculiar to each listener and the acoustic details of each sound. Maybe the example above was heavily biased for your particular ears? <a href="http://audition.ens.fr/dp/illusion/more_examples.html" target="_blank">Try those instead.</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Credits -->
+  <div id="credits">
+    <h2>Credits</h2>
+    <p><a href="http://audition.ens.fr/dp/illusion/index_toggle_waveform.html" target="_blank">Source Website</a> by Daniel Pressnitzer (daniel.pressnitzer at ens.fr)<br />
+      Graphic design by XXXX XXXX<br />
+      As part of the graphic design and multimedia course<br />
+      by Françoise Courbis and Benoît Montigné<br />
+      EnsAD / École nationale supérieure des Arts Décoratifs<br />
+      March 2018 </p>
+  </div>
+</div>
+</body>
+</html>

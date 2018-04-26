@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://audition.ens.fr/dp/illusion/index_toggle_waveform.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Auditory context illusion</title>
+
+
+
+<script src="./Auditory context illusion_files/jquery.min.js"></script>
+
+<script src="./Auditory context illusion_files/wavesurfer.min.js"></script>
+
+<script>
+
+// first the waveform business
+  $(document).ready(function(){
+  var wavesurferA = WaveSurfer.create({
+  container: '#waveformA',
+  waveColor: 'black',
+  progressColor: 'grey',
+  normalize: 'true',
+  cursorWidth: 2
+  });
+  
+  wavesurferA.load('./SequenceA.mp3');
+
+  document.querySelector(
+  '[data-action="playA"]'
+  ).addEventListener('click', wavesurferA.playPause.bind(wavesurferA));
+
+
+  var wavesurferB = WaveSurfer.create({
+  container: '#waveformB',
+  waveColor: 'black',
+  progressColor: 'grey',
+  normalize: 'true',
+  cursorWidth: 2
+  });
+  
+  wavesurferB.load('./SequenceB.mp3');
+ // wavesurferB.load('https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3');
+
+  document.querySelector(
+  '[data-action="playB"]'
+  ).addEventListener('click', wavesurferB.playPause.bind(wavesurferB));
+
+  window.onresize = function() 
+  {
+   wavesurferA.drawer.containerWidth = wavesurferA.drawer.container.clientWidth;
+   wavesurferA.drawBuffer();
+   wavesurferB.drawer.containerWidth = wavesurferB.drawer.container.clientWidth;
+   wavesurferB.drawBuffer();
+  };
+
+  });
+  
+
+// next the other boxes, animated
+
+$(document).ready(function(){
+$(".flipA").click(function(){
+$(".panelA").slideToggle("fast");
+});
+});
+
+
+$(document).ready(function(){
+$(".flipB").click(function(){
+$(".panelB").slideToggle("fast");
+});
+});
+
+
+$(document).ready(function(){
+$(".flipC").click(function(){
+$(".panelC").slideToggle("fast");
+});
+});
+
+
+
+$(document).ready(function(){
+$(".flipD").click(function(){
+$(".panelD").slideToggle("fast");
+});
+});
+
+</script>
+
+
+
+<style type="text/css"> 
+
+div.panelA,p.flipA
+{
+margin:0px 0 0px 0;
+padding:5px;
+text-align:center;
+background:#4b5499;
+border:solid 1px #4b5499;
+color:#ffffff;
+border-radius:0px;
+}
+div.panelA
+{
+display:none;
+}
+p.flipA
+{
+cursor:pointer;
+}
+
+div.panelB,p.flipB
+{
+margin:0px 0 0px 0;
+padding:5px;
+text-align:center;
+background:#4b5499;
+border:solid 1px #4b5499;
+color:#ffffff;
+border-radius:0px;
+}
+div.panelB
+{
+display:none;
+}
+p.flipB
+{
+cursor:pointer;
+}
+
+div.panelC,p.flipC
+{
+margin:0px 0 0px 0;
+padding:5px;
+background:#4b5499;
+border:solid 1px #4b5499;
+color:#ffffff;
+border-radius:0px;
+text-align:center;
+}
+div.panelC
+{
+display:none;
+}
+p.flipC
+{
+cursor:pointer;
+}
+
+div.panelD,p.flipD
+{
+margin:0px 0 0px 0;
+padding:5px;
+background:#4b5499;
+text-align:center;
+border:solid 1px #4b5499;
+color:#ffffff;
+border-radius:0px;
+}
+div.panelD
+{
+display:none;
+}
+p.flipD
+{
+cursor:pointer;
+}
+
+.button {
+    background-color: #303982;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0px 0px;
+    cursor: pointer;
+}
+
+div.waveboxA {
+    background-color: #eeeeee;
+}
+
+div.waveboxB {
+    background-color: #eeeeee;
+}
+
+body {
+    font-size: 1.1em; 
+    font-family: Verdana, Geneva, sans-serif;
+    line-height:1.2;
+}
+
+</style>
+
+</head>
+
+<body text="#000000" vlink="#cbcfeb" alink="#cbcfeb" link="#cbcfeb" bgcolor="#ffffff">
+
+
+<table style="border-spacing: 33px 0px;">
+<tbody><tr><td colspan="2" align="center"><h2 align="center">Auditory context illusion</h2></td></tr>
+
+
+
+<tr><td colspan="2" align="center">For each sequence, please try and decide:<br>Do you hear the pitch go <b>up or down</b> between the <b>two final tones?</b></td></tr>
+<tr><td colspan="2" align="center"></td></tr>
+
+<tr height="20px"><td></td><td></td><td></td></tr>
+
+
+<tr>
+<td width="500" align="center" valign="middle">
+<div id="waveformA" class="waveboxA"><wave style="display: block; position: relative; user-select: none; height: 128px; overflow-x: auto; overflow-y: hidden;"><canvas width="1000" height="256" style="position: absolute; z-index: 1; left: 0px; top: 0px; bottom: 0px; width: 500px;"></canvas><wave style="position: absolute; z-index: 2; left: 0px; top: 0px; bottom: 0px; overflow: hidden; width: 0px; display: block; box-sizing: border-box; border-right: 2px solid rgb(51, 51, 51);"><canvas width="1000" height="256" style="width: 500px;"></canvas></wave></wave></div>
+<div class="controls">
+<input type="button" class="button" value="Play/Pause Sequence A" id="butplayA" data-action="playA">
+</div>
+ 
+
+</td>
+<td width="500" align="center">
+<div id="waveformB" class="waveboxB"><wave style="display: block; position: relative; user-select: none; height: 128px; overflow-x: auto; overflow-y: hidden;"><canvas width="1000" height="256" style="position: absolute; z-index: 1; left: 0px; top: 0px; bottom: 0px; width: 500px;"></canvas><wave style="position: absolute; z-index: 2; left: 0px; top: 0px; bottom: 0px; overflow: hidden; width: 0px; display: block; box-sizing: border-box; border-right: 2px solid rgb(51, 51, 51);"><canvas width="1000" height="256" style="width: 500px;"></canvas></wave></wave></div>
+<div class="controls">
+  <input type="button" class="button" value="Play/Pause Sequence B" id="butplayB" data-action="playB">
+</div>
+
+
+</td>
+</tr>
+
+<tr height="20px"><td></td><td></td><td></td></tr>
+
+<tr><td colspan="2" align="center">
+<p class="flipA">What did you hear?</p>
+<div class="panelA">
+<p>Most people report an upward shift at the end of Sequence A, and a downward shift at the end of Sequence B.<br>Do you agree?</p>
+</div>
+</td></tr>
+
+<tr height="20px"><td></td><td></td><td></td></tr>
+
+<tr><td colspan="2" align="center">
+<p class="flipB">What was played?</p>
+<div class="panelB">In fact, the two final tones of Sequence A are  <b>physically identical</b> to the two final tones of Sequence B. <br>Only the preceding melodies are different.<p> Do not take our word for it: use the sliders above to listen only to the two final tones of Sequence A and Sequence B (without any note from the preceding melody). You will hear that they really are the same in both cases. </p>
+</div>
+</td></tr>
+
+<tr height="20px"><td></td><td></td><td></td></tr>
+
+<tr><td colspan="2" align="center">
+<p class="flipC">Want to know more?</p>
+<div class="panelC"> 
+
+<p>We believe that the illusion reveals potent and ubiquitous contextual processing in audition, perhaps explaining why people are so good at dealing with complex natural auditory scenes. </p>
+
+<p>In a few words, everytime you hear two successive sounds (two phonemes, two musical notes), you need somehow to bind them over time to realise that e.g. pitch went up. In our examples, the final two tones presented a carefully-balanced situation: there were as many "up" transitions between successive frequencies than "down" transitions. What the context did was to bias you towards one possible binding between tones, the binding that minimizes the overall distance between tones (after all, real sounds do tend to evolve smoothly over time).</p>
+
+<p>This is only part of the story! For a lot of behavioral data, some brain imaging, and a computational model explaining why this is important for everyday sounds, see: <a href="http://audition.ens.fr/dp/illusion/zzz,html">'Prior context in audition informs binding and shapes simple features',</a> Nature Communications, by Claire Chambers, Sahar Akram, Vincent Adam, Claire Pelofi, Maneesh Sahani, Shihab Shamma, and Daniel Pressnitzer.</p>
+
+<p>This work was done in the <a href="http://iec-lsp.ens.fr/?lang=en">LSP</a> lab (<a href="http://www.cnrs.fr/">CNRS</a> &amp; <a href="http://www.ens.fr/">Ecole normale supérieure</a>), in collaboration with <a href="http://www.umd.edu/">U. Maryland</a> (USA) and the <a href="http://www.gatsby.ucl.ac.uk/">Gatsby Institute</a> in London. </p>
+</div>
+
+</td></tr><tr height="20px"><td></td><td></td><td></td></tr>
+
+<tr><td colspan="2" align="center">
+<p class="flipD">Wait, it did not really work for me...</p>
+<div class="panelD"> 
+<p>The illusion was found to be highly robust, in a series of psychophysical and online experiments involving 150+ participants. But, interestingly, sometimes there were also strong biases towards one direction, peculiar to each listener and the acoustic details of each sound. Maybe the example above was heavily biased for your particular ears? <a href="http://audition.ens.fr/dp/illusion/more_examples.html">Try those</a> instead.</p>
+
+</div>
+
+</td></tr><tr height="20px"><td></td><td></td><td></td></tr>
+
+
+<tr><td colspan="2"><p style="text-align:right; font-size:10px;">Website by Daniel Pressnitzer (daniel.pressnitzer at ens.fr)</p></td></tr>
+
+
+</tbody></table>
+
+
+
+
+</body></html>
