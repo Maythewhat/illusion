@@ -8,6 +8,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <!-- Feuille de style CSS personnalisée -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
     <!-- Chargement de jQuery (simplification du langage JavaScript) -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <!-- Chargement des utilitaires-->
@@ -18,17 +19,39 @@
 
     <!-- Scripts personnalisés -->
     <script type="text/javascript" src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600" rel="stylesheet">
 </head>
 
-<body>
+<body class="is-start">
+    <div class="welcome animated bounceIn">
+        <div class="welcome-title">This website is presented to you by</div>
+        <p>
+            <div class="entity">
+                <div class="title">
+                    <a href="http://audition.ens.fr/dp/illusion/index_toggle_waveform.html" target="_blank">
+                        Source Website</a>
+                </div>
+                <div class="name">Daniel Pressnitzer (daniel.pressnitzer at ens.fr)</div>
+            </div>
+            <div class="entity">
+                <div class="title">Graphic design</div>
+                <div class="name">Madeleine Lequoy</div>
+            </div>
+            <div class="entity">
+                <div class="title">As part of the graphic design and multimedia course</div>
+                <div class="name">Françoise Courbis & Benoît Montigné
+                    <br/>EnsAD / École nationale supérieure des Arts Décoratifs</div>
+            </div>
+            <i>May 2018</i>
+            <div class="pretty-button" id="startButton">Discover</div>
 
+    </div>
     <!-- Entête -->
     <header>
         <h1>Auditory context illusion</h1>
     </header>
-    <div class="mask"> </div>
-    <div class="main-container">
+    <div class="mask"></div>
+    <div class="main-container animated fadeIn">
         <!-- Zone Ecoute -->
         <div id="listening">
             <h2>Listening</h2>
@@ -39,7 +62,7 @@
                     <h3>Waveform A</h3>
                     <div class="pretty-button" id="butplayA">Play</div>
                 </div>
-                <div class="graphics" id="waveformA">
+                <div class="graphics animated fadeIn" id="waveformA">
                     <div class="overlay">
                         This is the important part
                     </div>
@@ -50,7 +73,7 @@
                     <h3>Waveform B</h3>
                     <div class="pretty-button" id="butplayB">Play</div>
                 </div>
-                <div class="graphics" id="waveformB">
+                <div class="graphics animated fadeIn" id="waveformB">
                     <div class="overlay">
                         This is the important part
                     </div>
@@ -118,18 +141,6 @@
                     </p>
                 </div>
             </div>
-        </div>
-
-        <!-- Credits -->
-        <div id="credits">
-            <h2>Credits</h2>
-            <p>
-                <a href="http://audition.ens.fr/dp/illusion/index_toggle_waveform.html" target="_blank">Source Website</a> by Daniel Pressnitzer (daniel.pressnitzer at ens.fr)
-                <br /> Graphic design by XXXX XXXX
-                <br /> As part of the graphic design and multimedia course
-                <br /> by Françoise Courbis and Benoît Montigné
-                <br /> EnsAD / École nationale supérieure des Arts Décoratifs
-                <br /> March 2018 </p>
         </div>
     </div>
 </body>
