@@ -308,5 +308,7 @@ p {
 }
 
 @media screen and (max-width: 640px) {
-    font-size: 3vw;
+    body {
+        font-size: 5vw;
+    }
 }
