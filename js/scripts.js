@@ -47,6 +47,7 @@ $(document).ready(function() {
   // Préparation de l'affichage du signal son A
   var wavesurferA = WaveSurfer.create({
     container: '#waveformA',
+    backend: 'MediaElement',
     waveColor: '#102B3F',
     progressColor: '#006494',
     normalize: 'true',
@@ -99,6 +100,7 @@ $(document).ready(function() {
   // Préparation de l'affichage du signal son B
   var wavesurferB = WaveSurfer.create({
     container: '#waveformB',
+    backend: 'MediaElement',
     waveColor: '#214F4B',
     progressColor: '#25A18E',
     normalize: 'true',
