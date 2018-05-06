@@ -20,6 +20,7 @@ html {
 
 body {
     background-color: #eee;
+    transition: all 0.4s;
     color: #102b3f;
     font-size: 18px;
     line-height: 1.4;
@@ -47,6 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    background: #1f1f1f;
 }
 
 .is-start .welcome {
@@ -291,4 +293,15 @@ p {
     transition: all 0.3s;
     transform: rotate(90deg);
     margin-right: 12px;
+}
+
+#backToStartButton {
+    color: #37718e;
+    font-weight: 200;
+}
+
+#backToStartButton:hover {
+    cursor: pointer;
+    font-weight: 400;
+    text-decoration: underline;
 }

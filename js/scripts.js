@@ -14,9 +14,18 @@ $(document).ready(function() {
 
     $('.welcome').addClass('fadeOut');
     setTimeout(() => {
-      $('.is-start').removeClass('is-start');
+      $('body').removeClass('is-start');
       draw();
     }, 500);
+  });
+
+  $('#backToStartButton').click(function() {
+    if (!hasStarted) {
+      return;
+    }
+    hasStarted = false;
+    $('.welcome').removeClass('fadeOut');
+    $('body').addClass('is-start');
   });
 
   function draw() {
