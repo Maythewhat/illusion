@@ -22,8 +22,8 @@ body {
     background-color: #eee;
     transition: all 0.4s;
     color: #102b3f;
+    font-size: 18px;
     line-height: 1.4;
-    font-size: 20px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -305,10 +305,4 @@ p {
     cursor: pointer;
     font-weight: 400;
     text-decoration: underline;
-}
-
-@media screen and (max-width: 640px) {
-    /* body {
-        font-size: 5vw;
-    } */
 }
