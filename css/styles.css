@@ -24,6 +24,7 @@ body {
     color: #102b3f;
     font-size: 18px;
     line-height: 1.4;
+    font-size: 2vw;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -307,8 +308,4 @@ p {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 640px) {
-    body {
-        font-size: 30px;
-    }
-}
+@media screen and (max-width: 640px) {}
