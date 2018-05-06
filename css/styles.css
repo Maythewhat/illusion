@@ -4,6 +4,13 @@
 * ===================================
 */
 
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: none !important;
+    animation-fill-mode: none !important
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -157,12 +164,12 @@ p {
 }
 
 .waveform-container .graphics {
-    animation-delay: 0.3s;
     background: #ddd;
     border-top: solid 1px;
     border-bottom: solid 1px;
     padding: 12px 0;
     margin: 12px -40px;
+    z-index: 100;
     position: relative;
 }
 
